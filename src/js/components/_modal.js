@@ -10,6 +10,7 @@ callBtn.forEach(function (el) {
     modalBlock.classList.toggle('modal-active')
     formCall.style.display = 'block'
     formFeedBack.style.display = 'none'
+    document.body.classList.toggle('stop-scroll')
   })
 })
 
@@ -18,9 +19,11 @@ feedBackBtn.forEach(function (el) {
     modalBlock.classList.toggle('modal-active')
     formCall.style.display = 'none'
     formFeedBack.style.display = 'block'
+    document.body.classList.toggle('stop-scroll')
   })
 })
 
 modalClose.addEventListener('click', function () {
   modalBlock.classList.toggle('modal-active')
+  document.body.classList.toggle('stop-scroll')
 })
