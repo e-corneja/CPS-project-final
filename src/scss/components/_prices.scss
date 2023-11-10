@@ -1,0 +1,202 @@
+.prices {
+  background-color: $bg-color;
+  padding-bottom: 40px;
+
+  .title-table {
+    display: none;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $font-color-light;
+    padding: 29px 23px 15px 17px;
+    @media (min-width: 768px) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 53% repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (min-width: 1036px) {
+      gap: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      grid-template-columns: 46% 2fr 1fr 1fr 112px;
+      padding-left: 32px;
+    }
+  }
+
+  .table {
+    @media (min-width: 768px) {
+      max-height: 100%;
+      margin: 0 auto;
+      max-width: calc(100vw - 48px);
+      gap: 0;
+    }
+
+    @media (min-width: 1120px) {
+      max-width: calc(100vw - 64px);
+    }
+    @media (min-width: 1440px) {
+      max-width: 1044px;
+    }
+  }
+
+  .table-slide {
+    @media (min-width: 768px) {
+      max-width: 100%;
+
+      &::after {
+        content: '';
+        width: 96%;
+        height: 1px;
+        background-color: $border-color;
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+      }
+
+      &:last-of-type {
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+    @media (min-width: 1120px) {
+      &::after {
+        width: 95%;
+        left: 3%;
+      }
+    }
+  }
+
+  &__swiper {
+    margin-bottom: 21px;
+    @media (min-width: 768px) {
+      margin-bottom: 23px;
+    }
+    @media (min-width: 1120px) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__card {
+    color: $font-color-dark;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    padding: 16px 8px;
+    background-color: #fff;
+    border-radius: 6px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 3px;
+
+    @media (min-width: 768px) {
+      height: auto;
+      grid-template-columns: 53% repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      padding: 18px 15px 15px 17px;
+      column-gap: 14px;
+      border-radius: 0;
+    }
+
+    @media (min-width: 1120px) {
+      grid-template-columns: 46% 2fr repeat(2, 1fr);
+      padding-left: 32px;
+    }
+  }
+
+  .title-card {
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    display: block;
+    color: $font-color-light;
+    margin-bottom: 4px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    grid-column: span 2;
+    @media (min-width: 768px) {
+      grid-column: 1;
+      grid-row: -1;
+      align-self: center;
+    }
+  }
+
+  &__price {
+    align-self: center;
+    grid-column: span 2;
+    @media (min-width: 768px) {
+      grid-column: 2;
+      grid-row: -1;
+      align-self: center;
+    }
+  }
+
+  &__time {
+    color: $font-color-dark;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    grid-column: 1;
+    align-self: end;
+    @media (min-width: 768px) {
+      grid-column: 3 / 5;
+      grid-row: -1;
+      align-self: center;
+    }
+  }
+
+  .text-info {
+    padding: 0 16px;
+    color: $font-color-dark;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+    @media (min-width: 768px) {
+      padding: 0 24px;
+      max-width: 470px;
+      text-wrap: balance;
+    }
+  }
+
+  &__link {
+    color: $font-color-dark;
+    font-size: $main-size;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 0 16px;
+    display: inline-block;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent-color;
+    }
+    &:active {
+      color: $active-color;
+    }
+    @media (min-width: 768px) {
+      padding: 0 24px;
+    }
+  }
+
+  .more {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

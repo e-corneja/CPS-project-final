@@ -1,0 +1,40 @@
+.show__btn {
+  display: none;
+
+  .icon-expand-two {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #41f6d7;
+    outline-offset: 3px;
+  }
+
+  .btn-text {
+    color: #1b1c21;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: #41f6d7;
+    }
+
+    &:active {
+      color: #5ad3bf;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 9px;
+    margin-left: 20px;
+    align-self: flex-start;
+    position: relative;
+  }
+}

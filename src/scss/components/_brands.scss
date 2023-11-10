@@ -1,0 +1,35 @@
+.brands {
+  background-color: $bg-color;
+  padding-bottom: 29px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: 1120px) {
+    padding-bottom: 58px;
+  }
+  @media (min-width: 1440px) {
+    padding-bottom: 55px;
+  }
+
+  .swiper.brands__swiper {
+    @media (min-width: 768px) {
+      padding: 23px 23px 31px 23px;
+    }
+    @media (min-width: 1120px) {
+      padding-left: 31px;
+    }
+  }
+
+  .slider-card {
+    height: 72px;
+    border-radius: 6px;
+    border: 1px solid $border-color;
+    background: #fff;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,32 @@
+.order-btn {
+  background-color: $accent-color;
+  color: #fff;
+  width: 119px;
+  padding: 4px 8px 4px 13px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  max-width: fit-content;
+  display: flex;
+  gap: 9px;
+  justify-content: space-between;
+  grid-column: -2;
+  align-self: end;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  @media (min-width: 768px) {
+    grid-column: -1;
+    grid-row: -1;
+  }
+}

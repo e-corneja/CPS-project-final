@@ -1,0 +1,21 @@
+// базовые подключения
+@import 'fonts';
+@import 'vendor';
+@import 'variables';
+@import 'settings';
+
+// подключения компонентов страницы
+@import './components/layout';
+@import './components/modal';
+@import './components/burger';
+@import './components/header';
+@import './components/services';
+@import './components/title-block';
+@import './components/go-link';
+@import './components/show-btn';
+@import './components/slider';
+@import './components/brands';
+@import './components/devices';
+@import './components/prices';
+@import './components/order-btn';
+@import './components/footer';

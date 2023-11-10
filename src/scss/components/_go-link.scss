@@ -1,0 +1,10 @@
+.icon-go {
+  stroke: $accent-color;
+  fill: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    fill: rgba(255, 62, 120, 0.2);
+    stroke: rgba(255, 62, 120, 0.2);
+  }
+}

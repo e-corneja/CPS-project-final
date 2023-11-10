@@ -1,0 +1,118 @@
+.modal {
+  width: 100vw;
+
+  /* height: 100vh; */
+  background-color: rgba(255, 255, 255, 0.829);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  visibility: hidden;
+  transform: translateX(120%);
+  transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &__block {
+    margin-left: auto;
+    z-index: 201;
+    width: 320px;
+    height: 100vh;
+    padding: 24px 16px 32px 16px;
+    background-color: #fff;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  }
+
+  &__title {
+    margin-top: 33px;
+    margin-bottom: 24px;
+    color: $font-color-dark;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -16px;
+      border-radius: 0 10px 10px 0;
+      width: 4px;
+      height: 33px;
+      background-color: $color-secondary;
+      vertical-align: middle;
+    }
+  }
+
+  &__form-input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    padding: 12px 16px;
+    background: #fff;
+    margin-bottom: 16px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px $accent-color;
+    }
+  }
+
+  &__text {
+    color: $font-color-light;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+
+  .link-accent {
+    color: $accent-color;
+  }
+
+  &__btn {
+    background-color: $accent-color;
+    color: #fff;
+    min-width: 136px;
+    padding: 4px 8px 4px 19px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: auto;
+    gap: 9px;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &:active {
+      background-color: $active-color;
+    }
+  }
+
+  &__form--call {
+    display: none;
+  }
+
+  &__form--feedback {
+    display: none;
+  }
+
+  #textarea {
+    resize: none;
+
+    ::placeholder {
+      display: block;
+    }
+  }
+}
+
+.modal-active {
+  visibility: visible;
+  transform: none;
+}

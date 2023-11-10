@@ -1,0 +1,225 @@
+/******** BURGER-MENU ********/
+
+.burger {
+  width: 100vw;
+  /* height: 100vh; */
+  background-color: rgba(255, 255, 255, 0.829);
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  visibility: hidden;
+  transform: translateX(-120%);
+  transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  @media (min-width: 1440px) {
+    visibility: visible;
+    transform: none;
+    grid-area: aside;
+    display: block;
+    position: static;
+    background-color: transparent;
+    width: max-content;
+  }
+
+  &__block {
+    z-index: 201;
+    width: 320px;
+    height: 100vh;
+    padding: 19px 24px 32px 24px;
+    background-color: #fff;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    @media (min-width: 1440px) {
+      height: 100vh;
+      background-color: transparent;
+      box-shadow: none;
+      width: 308px;
+      padding: 31px 29px 32px 21px;
+      gap: 16px;
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 28px;
+
+    @media (min-width: 1440px) {
+      margin-bottom: 14px;
+
+      .close-btn {
+        display: none;
+      }
+    }
+  }
+
+  .form-container {
+    margin-left: auto;
+  }
+
+  &__list {
+    color: $font-color-dark;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: 1440px) {
+      gap: 25px;
+    }
+  }
+
+  &__item {
+    font-size: $main-size;
+    font-weight: 500;
+    position: relative;
+  }
+
+  &__link {
+    vertical-align: middle;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:active {
+      color: $active-color;
+    }
+  }
+
+  &__item--active {
+    color: $font-color-light;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      border-radius: 0 10px 10px 0;
+      width: 4px;
+      height: 30px;
+      background-color: $color-secondary;
+      vertical-align: middle;
+    }
+
+    &:nth-child(2) {
+      color: $font-color-dark;
+
+      &::before {
+        content: '';
+
+        width: 0;
+        height: 0;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      &:nth-child(2) {
+        color: $font-color-light;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: -24px;
+          border-radius: 0 10px 10px 0;
+          width: 4px;
+          height: 30px;
+          background-color: $color-secondary;
+          vertical-align: middle;
+        }
+      }
+
+      &:first-child {
+        color: $font-color-dark;
+        &::before {
+          content: '';
+
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+
+  .burger-group__btn {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    @media (min-width: 1440px) {
+      gap: 13px;
+    }
+  }
+  .contacts__link {
+    display: block;
+    transition: color 0.3s ease-in;
+
+    &:last-child {
+      color: $font-color-dark;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: -0.6px;
+    }
+
+    &:hover {
+      color: #808083;
+    }
+
+    &:active {
+      color: #494949;
+    }
+  }
+
+  .lang {
+    display: flex;
+    gap: 8px;
+    padding-top: 20px;
+    color: $font-color-dark;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    @media (min-width: 1440px) {
+      gap: 9px;
+      padding-top: 9px;
+    }
+  }
+
+  .lang__link--active {
+    color: $font-color-light;
+  }
+
+  .lang__link {
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: #818181;
+    }
+
+    &:active {
+      color: #333335;
+    }
+  }
+}
+
+.burger-active {
+  visibility: visible;
+  transform: none;
+}

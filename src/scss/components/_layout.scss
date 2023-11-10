@@ -1,0 +1,18 @@
+.container {
+  @media (min-width: 1440px) {
+    margin: auto;
+    display: grid;
+    max-width: 1440px;
+    grid-template-areas:
+      'aside main'
+      'aside footer';
+
+    .main {
+      grid-area: main;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+  }
+}

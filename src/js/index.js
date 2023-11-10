@@ -1,0 +1,6 @@
+import '../scss/main.scss'
+import './components/_burger.js'
+import './components/_modal.js'
+import './components/_showTextBtn.js'
+import './components/_slider.js'
+import './components/_showBtn.js'
