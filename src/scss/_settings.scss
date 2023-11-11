@@ -114,5 +114,7 @@ a:focus-visible {
 }
 
 .stop-scroll {
+  width: 100vw;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.829);
 }

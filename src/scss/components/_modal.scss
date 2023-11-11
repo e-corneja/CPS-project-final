@@ -1,9 +1,8 @@
 .modal {
   width: 100vw;
-
   /* height: 100vh; */
   background-color: rgba(255, 255, 255, 0.829);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 300;
@@ -40,6 +39,13 @@
       height: 33px;
       background-color: $color-secondary;
       vertical-align: middle;
+    }
+  }
+
+  .close-modal {
+    @media (min-width: 1440px) {
+      position: absolute;
+      transform: translateX(-78px);
     }
   }
 
