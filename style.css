@@ -427,7 +427,9 @@ a:focus-visible {
   clip: rect(0 0 0 0); }
 
 .stop-scroll {
-  overflow: hidden; }
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.829); }
 
 @media (min-width: 1440px) {
   .container {
@@ -444,7 +446,7 @@ a:focus-visible {
   width: 100vw;
   /* height: 100vh; */
   background-color: rgba(255, 255, 255, 0.829);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 300;
@@ -477,6 +479,10 @@ a:focus-visible {
       height: 33px;
       background-color: #41f6d7;
       vertical-align: middle; }
+  @media (min-width: 1440px) {
+    .modal .close-modal {
+      position: absolute;
+      transform: translateX(-78px); } }
   .modal__form-input {
     width: 100%;
     border-radius: 8px;
@@ -536,9 +542,7 @@ a:focus-visible {
 
 /******** BURGER-MENU ********/
 .burger {
-  width: 100vw;
   /* height: 100vh; */
-  background-color: rgba(255, 255, 255, 0.829);
   position: absolute;
   top: 0;
   z-index: 200;
@@ -551,11 +555,8 @@ a:focus-visible {
       transform: none;
       grid-area: aside;
       display: block;
-      position: static;
       background-color: transparent;
-      width: -webkit-max-content;
-      width: -moz-max-content;
-      width: max-content; } }
+      position: static; } }
   .burger__block {
     z-index: 201;
     width: 320px;
@@ -569,8 +570,10 @@ a:focus-visible {
     gap: 20px; }
     @media (min-width: 1440px) {
       .burger__block {
+        position: sticky;
+        top: 0;
+        left: 0;
         height: 100vh;
-        background-color: transparent;
         box-shadow: none;
         width: 308px;
         padding: 31px 29px 32px 21px;
