@@ -4,10 +4,12 @@ const burgerCloseBtn = document.querySelector('.close-btn')
 
 burgerOpenBtn.addEventListener('click', function () {
   burgerBlock.classList.toggle('burger-active')
-  document.body.classList.toggle('stop-scroll')
+  if (!document.body.classList.contains('stop-scroll')) {
+    document.body.classList.add('stop-scroll')
+  }
 })
 
 burgerCloseBtn.addEventListener('click', function () {
   burgerBlock.classList.toggle('burger-active')
-  document.body.classList.toggle('stop-scroll')
+  document.body.classList.remove('stop-scroll')
 })

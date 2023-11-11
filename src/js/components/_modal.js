@@ -4,13 +4,16 @@ const feedBackBtn = document.querySelectorAll('.feedback-btn')
 const modalClose = document.querySelector('.close-modal')
 const formCall = document.querySelector('.modal__form--call')
 const formFeedBack = document.querySelector('.modal__form--feedback')
+const burgerBlock = document.querySelector('.burger')
 
 callBtn.forEach(function (el) {
   el.addEventListener('click', function () {
     modalBlock.classList.toggle('modal-active')
     formCall.style.display = 'block'
     formFeedBack.style.display = 'none'
-    document.body.classList.toggle('stop-scroll')
+    if (!document.body.classList.contains('stop-scroll')) {
+      document.body.classList.add('stop-scroll')
+    }
   })
 })
 
@@ -19,11 +22,18 @@ feedBackBtn.forEach(function (el) {
     modalBlock.classList.toggle('modal-active')
     formCall.style.display = 'none'
     formFeedBack.style.display = 'block'
-    document.body.classList.toggle('stop-scroll')
+    if (!document.body.classList.contains('stop-scroll')) {
+      document.body.classList.add('stop-scroll')
+    }
   })
 })
 
 modalClose.addEventListener('click', function () {
   modalBlock.classList.toggle('modal-active')
-  document.body.classList.toggle('stop-scroll')
+  if (document.body.classList.contains('stop-scroll')) {
+    document.body.classList.remove('stop-scroll')
+  }
+  if (burgerBlock.classList.contains('burger-active')) {
+    document.body.classList.add('stop-scroll')
+  }
 })

@@ -24,11 +24,10 @@ html {
 
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
   min-width: 320px;
+  -webkit-font-smoothing: antialiased;
   font-family: 'TTLakes', sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
 }
 /*
   5. Improve media defaults
@@ -114,7 +113,5 @@ a:focus-visible {
 }
 
 .stop-scroll {
-  width: 100vw;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.829);
 }
