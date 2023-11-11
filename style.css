@@ -346,11 +346,10 @@ html {
 
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
   min-width: 320px;
+  -webkit-font-smoothing: antialiased;
   font-family: 'TTLakes', sans-serif;
-  font-weight: 400;
-  overflow-x: hidden; }
+  font-weight: 400; }
 
 /*
   5. Improve media defaults
@@ -427,9 +426,7 @@ a:focus-visible {
   clip: rect(0 0 0 0); }
 
 .stop-scroll {
-  width: 100vw;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.829); }
+  overflow: hidden; }
 
 @media (min-width: 1440px) {
   .container {
@@ -445,7 +442,7 @@ a:focus-visible {
 .modal {
   width: 100vw;
   /* height: 100vh; */
-  background-color: rgba(255, 255, 255, 0.829);
+  background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
   right: 0;
@@ -543,7 +540,9 @@ a:focus-visible {
 /******** BURGER-MENU ********/
 .burger {
   /* height: 100vh; */
-  position: absolute;
+  background-color: rgba(255, 255, 255, 0.829);
+  width: 100vw;
+  position: fixed;
   top: 0;
   z-index: 200;
   visibility: hidden;
@@ -551,6 +550,7 @@ a:focus-visible {
   transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out; }
   @media (min-width: 1440px) {
     .burger {
+      width: 320px;
       visibility: visible;
       transform: none;
       grid-area: aside;
