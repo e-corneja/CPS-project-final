@@ -1094,6 +1094,14 @@ a:focus-visible {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+  .brands .fade {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    width: 26px;
+    height: 107px;
+    background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%); }
 
 .devices {
   background-color: #f8f8f8;
@@ -1120,6 +1128,14 @@ a:focus-visible {
     justify-content: space-between; }
   .devices__link {
     align-self: flex-end; }
+  .devices .fade {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    width: 26px;
+    height: 204px;
+    background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%); }
 
 .prices {
   background-color: #f8f8f8;
@@ -1272,6 +1288,14 @@ a:focus-visible {
   .prices .more {
     display: inline-block;
     vertical-align: middle; }
+  .prices .fade {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    width: 26px;
+    height: 230px;
+    background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%); }
 
 .title-card {
   opacity: 0.8;
