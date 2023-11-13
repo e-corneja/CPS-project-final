@@ -37,3 +37,16 @@ modalClose.addEventListener('click', function () {
     document.body.classList.add('stop-scroll')
   }
 })
+
+document.addEventListener('click', function (e) {
+  let target = e.target
+  if (target == modalBlock) {
+    modalBlock.classList.remove('modal-active')
+    if (document.body.classList.contains('stop-scroll')) {
+      document.body.classList.remove('stop-scroll')
+    }
+    if (burgerBlock.classList.contains('burger-active')) {
+      document.body.classList.add('stop-scroll')
+    }
+  }
+})

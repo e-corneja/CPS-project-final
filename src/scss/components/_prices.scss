@@ -112,19 +112,6 @@
     }
   }
 
-  .title-card {
-    opacity: 0.8;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    display: block;
-    color: $font-color-light;
-    margin-bottom: 4px;
-    @media (min-width: 768px) {
-      display: none;
-    }
-  }
-
   &__text {
     grid-column: span 2;
     @media (min-width: 768px) {
@@ -198,5 +185,18 @@
   .more {
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+.title-card {
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  display: block;
+  color: $font-color-light;
+  margin-bottom: 4px;
+  @media (min-width: 768px) {
+    display: none;
   }
 }
