@@ -38,7 +38,7 @@ modalClose.addEventListener('click', function () {
   }
 })
 
-document.addEventListener('click', function (e) {
+window.document.addEventListener('click', function (e) {
   let target = e.target
   if (target == modalBlock) {
     modalBlock.classList.remove('modal-active')

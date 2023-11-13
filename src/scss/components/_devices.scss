@@ -31,4 +31,18 @@
   &__link {
     align-self: flex-end;
   }
+
+  .fade {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    width: 26px;
+    height: 204px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0) 100%
+    );
+  }
 }

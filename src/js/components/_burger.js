@@ -13,3 +13,11 @@ burgerCloseBtn.addEventListener('click', function () {
   burgerBlock.classList.toggle('burger-active')
   document.body.classList.remove('stop-scroll')
 })
+
+window.document.addEventListener('click', function (e) {
+  let target = e.target
+  if (target == burgerBlock) {
+    burgerBlock.classList.remove('burger-active')
+    document.body.classList.remove('stop-scroll')
+  }
+})
